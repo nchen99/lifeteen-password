@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            You'll never guess this password!!!
+        </title>
+        <meta charset="utf-8">
+        <meta name=”viewport” content=”width=device-width, initial-scale=0.41, maximum-scale=1″>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type  = "text/css" href = "style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+            <div class = "p-2">
+                <p class = "bodyParagraph">
+                    
+                </p>
+            </div>
+            <div class = "p-2 codeForm">
+                <form action = "javascript:checkCode();">
+                    CODE:<br>
+                    <input type="text" name="code" id = "answer" value=""><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class = "p-2 codeForm" id = "resultGood">
+                <p>
+                    I can't believe this, you've recovered the password!!
+                </p>
+            </div>
+            <div class = "p-2 codeForm" id = "resultBad">
+                <p>
+                    Mwahaha, try again!
+                </p>
+            </div>
+
+        </div>
+    </body>
+
+    <script>
+        $(document).ready(function(){
+            $("#resultGood").hide();
+            $("#resultBad").hide();
+        });
+
+        goToHome = function() {
+            location.href = "index.html";
+        }
+
+        checkCode = function() {
+            if($("#answer").val() == "NUT3LL4"){
+                $("#resultGood").show();
+                $("#resultBad").hide();
+            }
+            else{
+                $("#resultBad").show();
+                $("#resultGood").hide();
+            }
+        }
+    </script>
+</html>
